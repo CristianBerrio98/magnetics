@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_medios_magneticos_form">
+            <field name="name">o.magnetics.form</field>
+            <field name="model">o.magnetics</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <!-- Agrega otros campos aquí -->
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_medios_magneticos_tree">
+            <field name="name">medios.magneticos.tree</field>
+            <field name="model">medios.magneticos</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <!-- Agrega otros campos aquí -->
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_medios_magneticos">
+            <field name="name">Medios Magnéticos</field>
+            <field name="res_model">medios.magneticos</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_medios_magneticos" name="Medios Magnéticos" parent="base.menu_administration" sequence="30"/>
+        <menuitem id="menu_medios_magneticos_list" name="Lista de Medios Magnéticos" parent="menu_medios_magneticos" action="action_medios_magneticos"/>
+    </data>
+</odoo>
